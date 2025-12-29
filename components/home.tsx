@@ -79,16 +79,16 @@ const Hero: React.FC = () => {
             <div className="relative z-10 px-6 md:px-16 lg:px-24 max-w-7xl w-full">
                 <div ref={contentRef} className="max-w-2xl">
                     <h1 className="hero-headline text-5xl md:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
-                        Finding Your New <br /> Home Is Simple
+                        Premium Properties in <br /> Bahria Town Phase 7 
                     </h1>
 
                     <p className="hero-subtext text-white/70 text-lg md:text-xl mb-12 max-w-lg leading-relaxed font-light">
-                        RentHomes.com is your go-to destination for finding the perfect rental home to suit your needs. With thousands of property listings across the United States and Europe.
+                        Buy, Sell & Invest with Confidence — Trusted Real Estate Experts Offering Transparent Deals and High-Value Opportunities.
                     </p>
 
                     <div className="hero-mini-search flex items-center group cursor-pointer" onClick={() => searchBarRef.current?.scrollIntoView({ behavior: 'smooth' })}>
                         <div className="px-10 py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full text-white/90 text-sm font-medium flex items-center gap-8 group-hover:bg-white/20 transition-all">
-                            <span>Explore Now</span>
+                            <span>View Proporties</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
