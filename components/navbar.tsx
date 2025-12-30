@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
                                     <span className="opacity-100 visible ">—</span>
                                     Home
                                 </a>
-                                {['Properties', 'Blog', 'Experience', 'Contact'].map((item) => (
+                                {['Proporties', 'Services', 'Experience', 'Contact'].map((item) => (
                                     <a
                                         key={item}
                                         href={`#${item.toLowerCase()}`}

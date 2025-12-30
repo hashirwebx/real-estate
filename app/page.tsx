@@ -120,6 +120,7 @@ const App: React.FC = () => {
       <div ref={loaderRef} className="fixed inset-0 z-[1000] pointer-events-none">
         <div className="loader-panel-top absolute top-0 left-0 w-full h-1/2 bg-[#0F172A] z-10" />
         <div className="loader-panel-bottom absolute bottom-0 left-0 w-full h-1/2 bg-[#0F172A] z-10" />
+
         <div className="loader-content absolute inset-0 z-20 flex flex-col items-center justify-center">
           <div className="flex overflow-hidden mb-12">
             {title.split('').map((char, i) => (
@@ -131,6 +132,7 @@ const App: React.FC = () => {
               </span>
             ))}
           </div>
+
           <div className="flex flex-col items-center gap-4 w-64 md:w-80">
             <div className="w-full h-[2px] bg-white/10 relative overflow-hidden rounded-full">
               <div className="loader-bar-fill absolute top-0 left-0 w-0 h-full bg-[#00D1A0]" />
@@ -142,6 +144,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </div>
+
 
       <div className="min-h-screen bg-white">
         <header className="relative">
