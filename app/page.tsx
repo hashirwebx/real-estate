@@ -12,7 +12,7 @@ import Navbar from "@/components/navbar";
 import PropertyTypes from "@/components/PropertyTypes";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import FeaturedProperties from '@/components/FeaturedProporties';
+import FeaturedProperties from '@/components/FeaturedProperties';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -160,5 +160,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-
