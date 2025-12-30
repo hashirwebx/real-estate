@@ -11,8 +11,8 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/navbar";
 import PropertyTypes from "@/components/PropertyTypes";
 import Contact from "@/components/contact";
-import Footer from "@/components/footer";
 import FeaturedProperties from '@/components/FeaturedProperties';
+import Footer from '@/components/footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
