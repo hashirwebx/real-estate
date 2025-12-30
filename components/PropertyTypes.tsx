@@ -3,7 +3,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
-import Image from 'next/image';
 import { PROPERTY_TYPES } from '@/constants';
 import ImageLightbox from './ImageLightbox';
 import { PropertyType } from '@/type';
@@ -45,10 +44,9 @@ const PropertyTypes: React.FC = () => {
                             onClick={() => setSelectedImage(type.image)}
                             className="type-card group relative overflow-hidden rounded-none h-[400px] cursor-zoom-in shadow-lg"
                         >
-                            <Image
+                            <img
                                 src={type.image}
                                 alt={type.title}
-                                fill
                                 className="absolute inset-0 w-full h-full object-cover object-bottom rounded-none transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
