@@ -12,7 +12,7 @@ import Navbar from "@/components/navbar";
 import PropertyTypes from "@/components/PropertyTypes";
 import Contact from "@/components/contact";
 import FeaturedProperties from '@/components/FeaturedProperties';
-import Footer from '@/components/footer';
+import Footer from '../components/footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
