@@ -6,14 +6,14 @@ import Lenis from 'lenis';
 import gsap from 'gsap';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Experience from "@/components/experience";
+import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import PropertyTypes from "@/components/PropertyTypes";
 import FeaturedProperties from '@/components/FeaturedProperties';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
-import Footer from '@/components/footer';
-import Navbar from '@/components/navbar';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 
 gsap.registerPlugin(ScrollTrigger);
 
