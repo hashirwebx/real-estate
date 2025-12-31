@@ -1,15 +1,19 @@
 "use client";
 
 import React from 'react';
-
+import Image from 'next/image';
+import Logo from '../Logo/logo4-removebg-preview.png';
 const Footer: React.FC = () => {
     return (
         <footer className="bg-slate-950 text-white py-16 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
                     <div>
+                        <div className="flex items-center gap-2 cursor-pointer">
+                            <Image src={Logo} alt="logo" className="h-20 w-auto object-contain" width={60} height={60} />
+                        </div>
                         <span className="text-2xl font-bold font-heading tracking-wider mb-6 block">
-                            BAHRIA<span className="text-[#FBA12B]">ELITE</span>
+                            Bahria<span className="text-[#755e40]">Elite</span>
                         </span>
                         <p className="text-white/40 text-sm leading-relaxed mb-6">
                             Leading the way in premium real estate services in Bahria Town Phase 7. Integrity, transparency, and results.
@@ -20,9 +24,9 @@ const Footer: React.FC = () => {
                         <h4 className="text-lg font-bold mb-6">Explore</h4>
                         <ul className="space-y-4 text-white/60 text-sm">
                             <li><a href="#home" className="hover:text-[#C5A059] transition-colors">Home</a></li>
-                            <li><a href="#locations" className="hover:text-[#C5A059] transition-colors">Locations</a></li>
-                            <li><a href="#types" className="hover:text-[#C5A059] transition-colors">Property Types</a></li>
-                            <li><a href="#featured" className="hover:text-[#C5A059] transition-colors">Featured Listings</a></li>
+                            <li><a href="#locations" className="hover:text-[#C5A059] transition-colors">Proporties</a></li>
+                            <li><a href="#types" className="hover:text-[#C5A059] transition-colors">Services</a></li>
+                            <li><a href="#featured" className="hover:text-[#C5A059] transition-colors">Experience</a></li>
                         </ul>
                     </div>
 
@@ -51,8 +55,8 @@ const Footer: React.FC = () => {
                         © {new Date().getFullYear()} Bahria Elite. All Rights Reserved.
                     </div>
                     <div className="flex gap-8 text-white/40 text-[10px] font-bold uppercase tracking-widest">
-                        <span>Demo Website — Can be customized</span>
-                        <span className="text-[#FBA12B]">Powered by Premium Digital</span>
+                        <span>Demo Website, Can be customized</span>
+                        <span className="text-[#FBA12B]">Powered by Peham.ltd</span>
                     </div>
                 </div>
             </div>

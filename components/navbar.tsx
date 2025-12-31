@@ -34,8 +34,8 @@ const Navbar: React.FC = () => {
                     }`}>
                 <div className="flex items-center gap-3 cursor-pointer group">
                     <div className="flex items-center gap-2 cursor-pointer">
-                    <Image src={Logo} alt="logo" className="h-16 w-auto object-contain" width={60} height={60}/>
-                </div>
+                        <Image src={Logo} alt="logo" className="h-16 w-auto object-contain" width={60} height={60} />
+                    </div>
                     <span className={`text-2xl font-bold tracking-tight transition-colors ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
                         Bahria Elite
                     </span>
@@ -80,8 +80,10 @@ const Navbar: React.FC = () => {
                         >
                             <div className="flex justify-start">
                                 <button
+                                    type="button"
                                     onClick={() => setIsMenuOpen(false)}
                                     className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-950 hover:scale-110 transition-transform shadow-lg"
+                                    aria-label="Close menu"
                                 >
                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
@@ -114,7 +116,7 @@ const Navbar: React.FC = () => {
                             <div className="flex flex-col md:flex-row justify-between items-end gap-10 mt-20">
                                 <div className="flex flex-col gap-2">
                                     <span className="text-slate-500 text-sm font-bold uppercase tracking-widest">Contact</span>
-                                    <a href="mailto:hello@homely.com" className="text-xl font-bold hover:text-[#00D1A0] transition-colors">hello@property.com</a>
+                                    <a href="mailto:hello@bahriaelit.com" className="text-xl font-bold hover:text-[#00D1A0] transition-colors">hello@property.com</a>
                                     <a href="tel:+12124567890" className="text-xl font-bold hover:text-[#00D1A0] transition-colors">+1-212-456-7890</a>
                                 </div>
                             </div>
