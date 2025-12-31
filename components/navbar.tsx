@@ -5,7 +5,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import Image from 'next/image';
+import Logo from '../Logo/logo4-removebg-preview.png';
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,11 +33,9 @@ const Navbar: React.FC = () => {
                 className={`fixed top-0 left-0 w-full z-50 px-6 md:px-16 lg:px-24 transition-all duration-500 flex items-center justify-between ${isScrolled ? 'py-4 bg-white/90 backdrop-blur-md shadow-sm' : 'py-8 bg-transparent'
                     }`}>
                 <div className="flex items-center gap-3 cursor-pointer group">
-                    <div className="w-10 h-10 flex items-center justify-center">
-
-                        <img src="https://lh3.googleusercontent.com/gg-dl/ABS2GSkjfiUhCcUilg0jgZzq9moPbrpvNFqufhsWM89TJjoGkmY4Hp3jksL4vCj06R_gw3ZTqLpaUwBVGldEkJUet_dcywl_QHGr-H9yvKnrJAB9WLMWQn90bfKDzAD2zXl-2OoAshWsz9ivhadFZiXD3iurD1DnebQUAhnpCHtROBW9QKIgNQ=s1024-rj" alt="Logo" width="40" height="40" />
-
-                    </div>
+                    <div className="flex items-center gap-2 cursor-pointer">
+                    <Image src={Logo} alt="logo" className="h-16 w-auto object-contain" width={60} height={60}/>
+                </div>
                     <span className={`text-2xl font-bold tracking-tight transition-colors ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
                         Bahria Elite
                     </span>
@@ -48,7 +47,7 @@ const Navbar: React.FC = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <span className={`text-sm font-bold tracking-tight ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
-                            +1-212-456-789
+                            +000000000
                         </span>
                     </div>
                     <div className={`hidden sm:block h-6 w-\[1px] ${isScrolled ? 'bg-slate-200' : 'bg-white/30'}`} />
@@ -79,7 +78,6 @@ const Navbar: React.FC = () => {
                             transition={{ type: 'spring', damping: 30, stiffness: 200 }}
                             className="absolute right-0 top-0 w-full sm:w-[500px] h-full bg-[#111827] text-white p-12 md:p-20 flex flex-col justify-between shadow-2xl"
                         >
-                            {/* Close Button */}
                             <div className="flex justify-start">
                                 <button
                                     onClick={() => setIsMenuOpen(false)}
@@ -99,8 +97,7 @@ const Navbar: React.FC = () => {
                                     <a
                                         key={item}
                                         href={`#${item.toLowerCase()}`}
-                                        className="text-5xl md:text-4xl font-medium text-slate-400 hover:text-white transition-all hover:translate-x-2"
-                                    >
+                                        className="text-5xl md:text-4xl font-medium text-slate-400 hover:text-white transition-all hover:translate-x-2">
                                         {item}
                                     </a>
                                 ))}
