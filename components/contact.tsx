@@ -164,9 +164,10 @@ const Contact: React.FC = () => {
                                 </div>
 
                                 <div className="pt-4">
-                                    <button className="bg-black text-white px-10 py-4 text-xs font-black uppercase tracking-widest hover:bg-slate-800 transition-all active:scale-95">
-                                        Submit Now
-                                    </button>
+                                    <button className="group relative px-10 py-4 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                                <span className="relative z-10">Submit Now</span>
+                                <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                            </button>
                                 </div>
                             </form>
                         </div>
@@ -180,7 +181,7 @@ const Contact: React.FC = () => {
                         <div className="bg-white p-6 shadow-xl border border-slate-100 max-w-[280px]">
                             <h4 className="font-bold text-sm text-slate-900 mb-1">Top 10 Group of Companies</h4>
                             <p className="text-[11px] text-slate-500 leading-relaxed mb-4">
-                                Office No 7, 1st Floor, Shahnawaz Plaza, G-11 Markaz G-11 Markaz G-11, Islamabad, 44000
+                                Office No 7, First Floor, Bahria Town, Pase 7, Islamabad
                             </p>
                             <div className="flex items-center gap-1 mb-2">
                                 <span className="text-[11px] font-bold text-slate-900">5.0</span>
@@ -197,7 +198,7 @@ const Contact: React.FC = () => {
 
                     {/* Actual Google Maps Embed targeting G-11 Islamabad */}
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.4674062143434!2d73.0039268!3d33.6841221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df960000000001%3A0x0!2zMzPCsDQxJzAyLjkiTiA3M8KwMDAnMTQuMSJF!5e0!3m2!1sen!2s!4v1709123456789!5m2!1sen!2s"
+                        src="https://www.google.com/maps/search/real+estate+company+dealing+in+bahria+town+phase+7/@33.5258548,73.0901284,3727m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}

@@ -43,9 +43,9 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6">Newsletter</h4>
                         <p className="text-white/40 text-sm mb-6">Get weekly updates on new property launches.</p>
-                        <div className="flex bg-white/5 rounded-none overflow-hidden p-1">
+                        <div className="flex bg-white/5 rounded-full overflow-hidden p-1">
                             <input type="email" placeholder="Email" className="bg-transparent px-4 py-2 w-full outline-none text-sm" />
-                            <button className="bg-[#FBA12B] text-slate-900 px-4 py-2 rounded-none font-bold text-xs uppercase">Join</button>
+                            <button className="bg-[#FBA12B] text-slate-900 px-4 py-2 rounded-full font-bold text-xs uppercase">Join</button>
                         </div>
                     </div>
                 </div>

@@ -30,9 +30,9 @@ const Navbar: React.FC = () => {
     return (
         <>
             <nav
-                className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-700 ease-out flex items-center justify-between px-6 md:px-10 ${isScrolled
-                        ? 'top-6 w-[95%] max-w-7xl py-3 bg-white/95 backdrop-blur-lg rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100'
-                        : 'top-0 w-full py-8 bg-transparent'
+                className={`fixed left-1/2 w-[1350px] -translate-x-1/2 z-50 rounded-full transition-all duration-900 ease-out flex items-center justify-between px-6 md:px-10 ${isScrolled
+                        ? 'top-6 w-[95%] max-w-7xl py-1 bg-white/95 backdrop-blur-lg rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100'
+                        : 'top-0 w-[80%] py-6 bg-transparent'
                     }`}
             >
                 <div className="flex items-center gap-3 cursor-pointer group">

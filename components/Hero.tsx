@@ -16,21 +16,23 @@ const Hero: React.FC = () => {
             tl.from('.hero-content > *', {
                 y: 40,
                 opacity: 0,
-                stagger: 0.2,
-                duration: 2.5,
+                stagger: 0.5,
+                duration: 3.5,
                 ease: 'power4.out'
             })
                 .from(infoCardRef.current, {
                     y: 100,
                     opacity: 0,
-                    duration: 2.8,
+                    duration: 4,
                     ease: 'expo.out'
-                }, '-=0.8');
+                }, '-=0.9');
 
         }, containerRef);
 
         return () => ctx.revert();
     }, []);
+
+
 
     return (
         <section
@@ -70,22 +72,17 @@ const Hero: React.FC = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Bottom Floating Info Bar */}
-            <div className="absolute bottom-0 left-0 w-full px-6 md:px-16 lg:px-24 z-20 flex justify-center md:justify-end pb-0">
+            <div className="absolute bottom-0 left-0 w-full flex justify-end md:justify-end pb-0">
                 <div
                     ref={infoCardRef}
-                    className="w-full max-w-5xl bg-white rounded-t-[40px] p-10 md:p-14 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-10">
-
+                    className="w-full max-w-5xl bg-white rounded-t-[40px] p-10 md:p-14 shadow-2xl flex flex-col md:flex-row justify-end gap-8 md:gap-20 -mb-10">
                     <div className="flex flex-1 items-center justify-between md:justify-start gap-8 md:gap-20 w-full">
-
                         <div className="flex flex-col items-center gap-3">
                             <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                             </svg>
                             <span className="text-slate-900 font-bold text-sm whitespace-nowrap">4 Bedrooms</span>
                         </div>
-
                         <div className="flex flex-col items-center gap-3">
                             <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />

@@ -25,8 +25,8 @@ const PropertyTypes: React.FC = () => {
                     },
                     y: 30,
                     opacity: 0,
-                    stagger: 0.15,
-                    duration: 1.2,
+                    stagger: 0.20,
+                    duration: 1.5,
                     ease: 'power4.out',
                 });
             }
@@ -40,8 +40,8 @@ const PropertyTypes: React.FC = () => {
                 y: 80,
                 scale: 0.95,
                 opacity: 0,
-                stagger: 0.1,
-                duration: 1.4,
+                stagger: 0.2,
+                duration: 1.6,
                 ease: 'expo.out',
             });
 
@@ -79,6 +79,9 @@ const PropertyTypes: React.FC = () => {
 
         return () => ctx.revert();
     }, []);
+
+
+    
 
     return (
         <section id="services" className="py-32 bg-white relative overflow-hidden" ref={containerRef}>
