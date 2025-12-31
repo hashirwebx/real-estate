@@ -8,12 +8,12 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Experience from "@/components/experience";
 import Hero from "@/components/Hero";
-import Navbar from "@/components/navbar";
 import PropertyTypes from "@/components/PropertyTypes";
-import Contact from "@/components/contact";
 import FeaturedProperties from '@/components/FeaturedProperties';
-import Footer from '../components/footer';
 import Testimonials from '@/components/Testimonials';
+import Contact from '@/components/Contact';
+import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
 
 gsap.registerPlugin(ScrollTrigger);
 

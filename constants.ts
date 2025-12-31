@@ -1,5 +1,5 @@
 
-import { Property, Highlight, Testimonial, PropertyType } from './types';
+import { Property, Highlight, Testimonial, PropertyType } from './type';
 
 export const COLORS = {
   primary: '#0F172A', // Navy Blue
