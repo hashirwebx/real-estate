@@ -31,8 +31,8 @@ const Navbar: React.FC = () => {
         <>
             <nav
                 className={`fixed left-1/2 w-[1350px] -translate-x-1/2 z-50 rounded-full transition-all duration-900 ease-out flex items-center justify-between px-6 md:px-10 ${isScrolled
-                        ? 'top-6 w-[95%] max-w-7xl py-1 bg-white/95 backdrop-blur-lg rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100'
-                        : 'top-0 w-[80%] py-6 bg-transparent'
+                    ? 'top-6 w-[95%] max-w-7xl py-1 bg-white/95 backdrop-blur-lg rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100'
+                    : 'top-0 w-[80%] py-6 bg-transparent'
                     }`}
             >
                 <div className="flex items-center gap-3 cursor-pointer group">
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                         
                     </button> */}
                     <div>
-                        <button onClick={() => setIsMenuOpen(true)} className="group relative flex items-center gap-3 px-6 py-2.5 bg-white hover:text-white text-slate-900 font-bold text-sm hover:bg-slate-50  border border-slate-100 rounded-2xl overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                        <button onClick={() => setIsMenuOpen(true)} className="group relative flex items-center gap-3 px-6 py-2.5 bg-white hover:text-white text-slate-900 font-bold text-sm hover:bg-slate-50  border border-slate-100 rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                             </svg>
@@ -120,11 +120,13 @@ const Navbar: React.FC = () => {
                                 ))}
                             </div>
                             <div className="flex items-center gap-4 mt-12">
-                                <button className="px-6 py-2 bg-[#00D1A0] text-slate-900 font-bold rounded-full text-lg hover:brightness-110 transition-all active:scale-95 shadow-lg shadow-[#00D1A0]/20">
-                                    Sign In
+                                <button className="group relative px-8 py-3 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                                    <span className="relative z-10">Sign in</span>
+                                    <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                                 </button>
-                                <button className="px-6 py-2 bg-transparent border-2 border-[#00D1A0]/40 text-[#00D1A0] font-bold rounded-full text-lg hover:bg-[#00D1A0]/10 transition-all active:scale-95">
-                                    Sign up
+                                <button className="group relative px-8 py-3 bg-white hover:text-white text-black font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                                    <span className="relative z-10">Sign up</span>
+                                    <div className="absolute inset-0 bg-[#FBA12B]  translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                                 </button>
                             </div>
 
