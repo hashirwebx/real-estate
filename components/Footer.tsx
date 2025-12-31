@@ -7,10 +7,10 @@ const Footer: React.FC = () => {
     return (
         <footer className="bg-slate-950 text-white py-16 px-6">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-26 pb-16">
                     <div>
                         <div className="flex items-center gap-2 cursor-pointer">
-                            <Image src={Logo} alt="logo" className="h-20 w-auto object-contain" width={60} height={60} />
+                            <Image src={Logo} alt="logo" className="h-20 w-auto object-contain" width={100} height={100} />
                         </div>
                         <span className="text-2xl font-bold font-heading tracking-wider mb-6 block">
                             Bahria<span className="text-[#755e40]">Elite</span>

@@ -30,8 +30,11 @@ const Navbar: React.FC = () => {
     return (
         <>
             <nav
-                className={`fixed top-0 left-0 w-full z-50 px-6 md:px-16 lg:px-24 transition-all duration-500 flex items-center justify-between ${isScrolled ? 'py-4 bg-white/90 backdrop-blur-md shadow-sm' : 'py-8 bg-transparent'
-                    }`}>
+                className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-700 ease-out flex items-center justify-between px-6 md:px-10 ${isScrolled
+                        ? 'top-6 w-[95%] max-w-7xl py-3 bg-white/95 backdrop-blur-lg rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100'
+                        : 'top-0 w-full py-8 bg-transparent'
+                    }`}
+            >
                 <div className="flex items-center gap-3 cursor-pointer group">
                     <div className="flex items-center gap-2 cursor-pointer">
                         <Image src={Logo} alt="logo" className="h-16 w-auto object-contain" width={60} height={60} />
@@ -52,15 +55,27 @@ const Navbar: React.FC = () => {
                     </div>
                     <div className={`hidden sm:block h-6 w-\[1px] ${isScrolled ? 'bg-slate-200' : 'bg-white/30'}`} />
 
-                    <button
+                    {/* <button
                         onClick={() => setIsMenuOpen(true)}
                         className="flex items-center gap-3 px-6 py-2.5 bg-white text-slate-900 rounded-full font-bold text-sm shadow-xl hover:bg-slate-50 transition-all active:scale-95 border border-slate-100"
                     >
+                        
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
-                        Menu
-                    </button>
+                        
+                        <span>Menu</span>
+                        
+                    </button> */}
+                    <div>
+                        <button onClick={() => setIsMenuOpen(true)} className="group relative flex items-center gap-3 px-6 py-2.5 bg-white hover:text-white text-slate-900 font-bold text-sm hover:bg-slate-50  border border-slate-100 rounded-2xl overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                            <span className="relative z-10">Menu</span>
+                            <div className="absolute inset-0 bg-slate-900 hover:text-white translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                        </button>
+                    </div>
                 </div>
             </nav>
             <AnimatePresence>

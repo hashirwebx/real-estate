@@ -33,7 +33,7 @@ const FeaturedProperties: React.FC = () => {
     }, []);
 
     return (
-        <section id="proporties" className="bg-[#0F172A] py-24 overflow-hidden w-full">
+        <section id="proporties" className="bg-[#101b35] py-24 overflow-hidden w-full ">
             <div className="max-w-7xl mx-auto px-6 mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured <br />Properties</h2>
                 <div className="flex items-center gap-4 text-[#C5A059]">

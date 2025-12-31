@@ -1,33 +1,33 @@
 
-import { Property, Highlight, Testimonial, PropertyType } from './type';
+import { Property, Highlight, Testimonial, PropertyType } from './types';
 
 export const COLORS = {
   primary: '#0F172A', // Navy Blue
-  secondary: '#C5A059', // Gold
+  secondary: '#00D1A0',
   accent: '#1E293B',
   bg: '#F8FAFC',
 };
 
 export const HIGHLIGHTS: Highlight[] = [
   {
-    title: "Prime Location",
-    description: "Located at the heart of Bahria Town Phase 7, with seamless access to Islamabad.",
-    icon: "📍"
-  },
-  {
-    title: "Secure Community",
-    description: "24/7 high-level security surveillance for a peace-of-mind living experience.",
-    icon: "🛡️"
-  },
-  {
-    title: "High ROI",
-    description: "One of the most sought-after investment destinations with consistent growth.",
+    title: "Market Strategy",
+    description: "Data-driven marketing campaigns that put your property in front of the right buyers.",
     icon: "📈"
   },
   {
-    title: "Urban Amenities",
-    description: "World-class hospitals, international schools, and premium retail at your doorstep.",
-    icon: "🏙️"
+    title: "Verified Listings",
+    description: "Every property we market is 100% verified for clear documentation and ownership.",
+    icon: "🛡️"
+  },
+  {
+    title: "Investor Focused",
+    description: "Specialized analysis for maximum rental yields and capital appreciation.",
+    icon: "💎"
+  },
+  {
+    title: "End-to-End Support",
+    description: "From virtual tours to legal paperwork, we handle the entire sales funnel.",
+    icon: "🤝"
   }
 ];
 
@@ -121,7 +121,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: "1",
     name: "Ahmed Malik",
     role: "Investment Analyst",
-    content: "Living in Bahria Elite residences has been an absolute dream! The spacious layout provides the perfect balance of privacy and community. The high-quality finishes make it feel luxurious yet homey.",
+    content: "Top 10 Marketing provided a clarity I haven't seen elsewhere in the local market. Their analysis of Bahria Elite was spot on.",
     rating: 5,
     image: "https://i.pravatar.cc/150?u=ahmed"
   },
@@ -129,7 +129,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: "2",
     name: "Sarah Khan",
     role: "Creative Director",
-    content: "Found our dream home within 2 weeks. The transparent dealing and after-sales support are what set this agency apart. The location is ideal, close to great schools, parks, and shopping.",
+    content: "Found our dream home within 2 weeks. The transparent dealing and after-sales support are what set this agency apart.",
     rating: 5,
     image: "https://i.pravatar.cc/150?u=sarah"
   },
@@ -137,7 +137,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: "3",
     name: "Michael Thompson",
     role: "CEO, Creative Industry",
-    content: "The attention to detail in Phase 7 is unmatched. Every morning I wake up to beautiful views and a peaceful environment. Best investment I've made for my family's future.",
+    content: "Professional, punctual, and highly skilled in market positioning. They made our commercial acquisition seamless.",
     rating: 5,
     image: "https://i.pravatar.cc/150?u=michael"
   },
@@ -145,7 +145,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: "4",
     name: "Zainab Ali",
     role: "Architect",
-    content: "As an architect, I appreciate the urban planning of Bahria Town. The agency helped me find a plot that perfectly matched my design vision. Highly recommended!",
+    content: "As an architect, I appreciate their focus on design-led properties. They truly understand the value of architecture.",
     rating: 5,
     image: "https://i.pravatar.cc/150?u=zainab"
   }

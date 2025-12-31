@@ -13,6 +13,7 @@ import PropertyTypes from "@/components/PropertyTypes";
 import Contact from "@/components/contact";
 import FeaturedProperties from '@/components/FeaturedProperties';
 import Footer from '../components/footer';
+import Testimonials from '@/components/Testimonials';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -116,7 +117,7 @@ const App: React.FC = () => {
   return (
     <div className="relative w-full overflow-hidden">
       <Navbar />
-      <div className="global-progress-bar fixed top-0 left-0 w-full h-[4px] bg-[#00D1A0] z-[100] origin-left scale-x-0" />
+      <div className="global-progress-bar fixed top-0 left-0 w-full h-[4px] bg-[#FBA12B] z-[100] origin-left scale-x-0" />
       <div ref={loaderRef} className="fixed inset-0 z-[1000] pointer-events-none">
         <div className="loader-panel-top absolute top-0 left-0 w-full h-1/2 bg-[#0F172A] z-10" />
         <div className="loader-panel-bottom absolute bottom-0 left-0 w-full h-1/2 bg-[#0F172A] z-10" />
@@ -135,11 +136,11 @@ const App: React.FC = () => {
 
           <div className="flex flex-col items-center gap-4 w-64 md:w-80">
             <div className="w-full h-[2px] bg-white/10 relative overflow-hidden rounded-full">
-              <div className="loader-bar-fill absolute top-0 left-0 w-0 h-full bg-[#00D1A0]" />
+              <div className="loader-bar-fill absolute top-0 left-0 w-0 h-full bg-[#FBA12B]" />
             </div>
             <div className="flex justify-between w-full px-1">
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 italic">Initializing Haven</span>
-              <span ref={counterRef} className="text-[10px] font-black text-[#00D1A0] tracking-widest">0%</span>
+              <span ref={counterRef} className="text-[10px] font-black text-[#FBA12B] tracking-widest">0%</span>
             </div>
           </div>
         </div>
@@ -154,6 +155,7 @@ const App: React.FC = () => {
           <PropertyTypes />
           <Experience />
           <FeaturedProperties />
+          <Testimonials />
           <Contact />
         </main>
         <Footer />

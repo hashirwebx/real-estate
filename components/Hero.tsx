@@ -58,9 +58,12 @@ const Hero: React.FC = () => {
                     </h1>
 
                     <div className="flex flex-wrap items-center gap-4">
-                        <button className="px-10 py-5 bg-white text-slate-900 font-bold rounded-full text-lg shadow-xl hover:bg-slate-100 transition-all active:scale-95">
-                            Get in touch
-                        </button>
+                        <div>
+                            <button className="group relative px-10 py-5 bg-white text-black hover:text-white font-bold rounded-full  text-lg overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                                <span className="relative z-10">Get in touch</span>
+                                <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                            </button>
+                        </div>
                         <button className="px-10 py-5 bg-transparent text-white border-2 border-white/40 backdrop-blur-sm font-bold rounded-full text-lg hover:bg-white/10 transition-all active:scale-95">
                             View Details
                         </button>

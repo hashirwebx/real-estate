@@ -121,9 +121,10 @@ const Experience: React.FC = () => {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-12 py-5 bg-[#FBA12B] text-slate-950 font-black rounded-none uppercase tracking-widest text-sm shadow-2xl"
+                            className="group relative px-10 py-4 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10"
                         >
-                            Meet Our Team
+                            <span className="relative z-10">Meet Our Team</span>
+                            <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                         </motion.button>
                     </div>
                 </div>
