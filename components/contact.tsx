@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
     const contactInfo = [
         {
             label: "Visit Us:",
-            value: "Office No 7, First Floor, Bahria Town, Pase 7, Islamabad",
+            value: "Office No 7, First Floor, Bahria Town, Phase 7, Islamabad",
             icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -124,28 +124,28 @@ const Contact: React.FC = () => {
                                         <input
                                             type="text"
                                             placeholder="Name"
-                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-slate-400"
+                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black"
                                         />
                                     </div>
                                     <div className="relative">
                                         <input
                                             type="email"
                                             placeholder="E-Mail"
-                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-slate-400"
+                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black"
                                         />
                                     </div>
                                     <div className="relative">
                                         <input
                                             type="tel"
                                             placeholder="Phone Number"
-                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-slate-400"
+                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black"
                                         />
                                     </div>
                                     <div className="relative">
                                         <input
                                             type="text"
                                             placeholder="Your Website"
-                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-slate-400"
+                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black"
                                         />
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
                                     <textarea
                                         rows={4}
                                         placeholder="Your Message Here"
-                                        className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-slate-400 resize-none"
+                                        className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black resize-none"
                                     />
                                     <div className="absolute bottom-4 right-0 text-slate-400">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,7 +164,7 @@ const Contact: React.FC = () => {
                                 </div>
 
                                 <div className="pt-4">
-                                    <button className="group relative px-10 py-4 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                                    <button type="submit" className="group relative px-10 py-4 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
                                 <span className="relative z-10">Submit Now</span>
                                 <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                             </button>
@@ -181,7 +181,7 @@ const Contact: React.FC = () => {
                         <div className="bg-white p-6 shadow-xl border border-slate-100 max-w-70">
                             <h4 className="font-bold text-sm text-slate-900 mb-1">Top 10 Group of Companies</h4>
                             <p className="text-[11px] text-slate-500 leading-relaxed mb-4">
-                                Office No 7, First Floor, Bahria Town, Pase 7, Islamabad
+                                Office No 7, First Floor, Bahria Town, Phase 7, Islamabad
                             </p>
                             <div className="flex items-center gap-1 mb-2">
                                 <span className="text-[11px] font-bold text-slate-900">5.0</span>
