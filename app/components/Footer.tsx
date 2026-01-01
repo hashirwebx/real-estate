@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Logo from '../Logo/logo4-removebg-preview.png';
+import Logo from '../../Logo/logo4-removebg-preview.png';
 const Footer: React.FC = () => {
     return (
         <footer className="bg-slate-950 text-white py-16 px-6">

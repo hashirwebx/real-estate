@@ -7,7 +7,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';
-import { PROPERTY_TYPES } from '../constants';
+import { PROPERTY_TYPES } from '../../constants';
 
 const PropertyTypes: React.FC = () => {
     const containerRef = useRef<HTMLElement>(null);

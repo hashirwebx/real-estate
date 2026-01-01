@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { TESTIMONIALS } from '../constants';
+import { TESTIMONIALS } from '../../constants';
 import Image from 'next/image';
 
 const Testimonials: React.FC = () => {
