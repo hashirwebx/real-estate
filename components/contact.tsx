@@ -91,13 +91,13 @@ const Contact: React.FC = () => {
                             Get In Touch
                         </h2>
                         <p className="contact-reveal text-slate-500 text-sm leading-relaxed mb-12 max-w-lg">
-                            Looking for information about a housing society or need help choosing the right property? We're here to assist you with expert guidance, project details, booking, and investment plans.
+                            Looking for information about a housing society or need help choosing the right property? Were here to assist you with expert guidance, project details, booking, and investment plans.
                         </p>
 
                         <div className="space-y-10">
                             {contactInfo.map((info, idx) => (
                                 <div key={idx} className="contact-reveal flex items-start gap-6 group">
-                                    <div className="flex-shrink-0 w-12 h-12 bg-white border border-slate-100 shadow-sm flex items-center justify-center text-slate-400 group-hover:text-slate-900 group-hover:border-slate-200 transition-all duration-300">
+                                    <div className="shrink-0 w-12 h-12 bg-white border border-slate-100 shadow-sm flex items-center justify-center text-slate-400 group-hover:text-slate-900 group-hover:border-slate-200 transition-all duration-300">
                                         {info.icon}
                                     </div>
                                     <div>
@@ -175,10 +175,10 @@ const Contact: React.FC = () => {
 
                 </div>
             </div>
-            <div className="map-container relative w-full h-[500px] bg-slate-100 border-t border-slate-100 overflow-hidden">
+            <div className="map-container relative w-full h-125 bg-slate-100 border-t border-slate-100 overflow-hidden">
                 <div className="map-reveal absolute inset-0 w-full h-full">
                     <div className="absolute top-10 left-10 z-10 hidden md:block">
-                        <div className="bg-white p-6 shadow-xl border border-slate-100 max-w-[280px]">
+                        <div className="bg-white p-6 shadow-xl border border-slate-100 max-w-70">
                             <h4 className="font-bold text-sm text-slate-900 mb-1">Top 10 Group of Companies</h4>
                             <p className="text-[11px] text-slate-500 leading-relaxed mb-4">
                                 Office No 7, First Floor, Bahria Town, Pase 7, Islamabad
@@ -192,20 +192,19 @@ const Contact: React.FC = () => {
                                 </div>
                                 <span className="text-[11px] text-blue-500 ml-1">36 reviews</span>
                             </div>
-                            <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="text-[11px] text-blue-600 font-bold hover:underline">View larger map</a>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-[11px] text-blue-600 font-bold hover:underline">View larger map</a>
                         </div>
                     </div>
 
-                    {/* Actual Google Maps Embed targeting G-11 Islamabad */}
                     <iframe
                         src="https://www.google.com/maps/search/real+estate+company+dealing+in+bahria+town+phase+7/@33.5258548,73.0901284,3727m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
                         width="100%"
                         height="100%"
-                        style={{ border: 0 }}
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        className="grayscale contrast-[1.1] opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                        title="Map showing location of Real Estate Company in Bahria Town Phase 7"
+                        className="grayscale contrast-[1.1] opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 border-0"
                     ></iframe>
                 </div>
             </div>

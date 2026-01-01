@@ -6,6 +6,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Image from 'next/image';
 import { PROPERTY_TYPES } from '../constants';
 
 const PropertyTypes: React.FC = () => {
@@ -123,12 +124,14 @@ const PropertyTypes: React.FC = () => {
                     </div>
                     <div
                         ref={(el) => { imagesRef.current[0] = el; }}
-                        className="grid-item-reveal md:col-span-7 h-[450px] overflow-hidden shadow-2xl relative group cursor-pointer"
+                        className="grid-item-reveal md:col-span-7 h-112.5 overflow-hidden shadow-2xl relative group cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={PROPERTY_TYPES[0].image}
                             alt={PROPERTY_TYPES[0].title}
-                            className="w-full h-full object-cover scale-110 transition-transform duration-1000 group-hover:scale-105"
+                            fill
+                            style={{objectFit: 'cover'}}
+                            className="scale-110 transition-transform duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
                         <div className="absolute bottom-10 left-10 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -139,12 +142,14 @@ const PropertyTypes: React.FC = () => {
 
                     <div
                         ref={(el) => { imagesRef.current[1] = el; }}
-                        className="grid-item-reveal md:col-span-6 h-[400px] overflow-hidden shadow-2xl relative group cursor-pointer"
+                        className="grid-item-reveal md:col-span-6 h-100 overflow-hidden shadow-2xl relative group cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={PROPERTY_TYPES[3].image}
                             alt={PROPERTY_TYPES[3].title}
-                            className="w-full h-full object-cover scale-110 transition-transform duration-1000 group-hover:scale-105"
+                            fill
+                            style={{objectFit: 'cover'}}
+                            className="scale-110 transition-transform duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
                         <div className="absolute bottom-10 left-10 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -157,12 +162,14 @@ const PropertyTypes: React.FC = () => {
 
                     <div
                         ref={(el) => { imagesRef.current[2] = el; }}
-                        className="grid-item-reveal md:col-span-3 h-[400px] overflow-hidden shadow-2xl relative group cursor-pointer"
+                        className="grid-item-reveal md:col-span-3 h-100 overflow-hidden shadow-2xl relative group cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={PROPERTY_TYPES[1].image}
                             alt={PROPERTY_TYPES[1].title}
-                            className="w-full h-full object-cover scale-110 transition-transform duration-1000 group-hover:scale-105"
+                            fill
+                            style={{objectFit: 'cover'}}
+                            className="scale-110 transition-transform duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
                         <div className="absolute bottom-10 left-10 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -175,12 +182,14 @@ const PropertyTypes: React.FC = () => {
 
                     <div
                         ref={(el) => { imagesRef.current[3] = el; }}
-                        className="grid-item-reveal md:col-span-3 h-[400px] overflow-hidden shadow-2xl relative group cursor-pointer"
+                        className="grid-item-reveal md:col-span-3 h-100 overflow-hidden shadow-2xl relative group cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={PROPERTY_TYPES[2].image}
                             alt={PROPERTY_TYPES[2].title}
-                            className="w-full h-full object-cover scale-110 transition-transform duration-1000 group-hover:scale-105"
+                            fill
+                            style={{objectFit: 'cover'}}
+                            className="scale-110 transition-transform duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
                         <div className="absolute bottom-10 left-10 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">

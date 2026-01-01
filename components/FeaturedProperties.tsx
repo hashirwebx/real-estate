@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import Image from 'next/image';
 import { FEATURED_PROPERTIES } from '../constants';
 import ImageLightbox from './ImageLightbox';
 
@@ -37,7 +38,7 @@ const FeaturedProperties: React.FC = () => {
             <div className="max-w-7xl mx-auto px-6 mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured <br />Properties</h2>
                 <div className="flex items-center gap-4 text-[#C5A059]">
-                    <div className="w-12 h-[2px] bg-[#C5A059]" />
+                    <div className="w-12 h-0.5 bg-[#C5A059]" />
                     <span className="text-sm font-bold uppercase tracking-widest">Selected for Excellence</span>
                 </div>
             </div>
@@ -51,14 +52,16 @@ const FeaturedProperties: React.FC = () => {
                         <div
                             key={prop.id}
                             onClick={() => setSelectedImage(prop.image)}
-                            className="featured-item flex-shrink-0 w-[300px] md:w-[600px] h-[500px] rounded-none overflow-hidden relative group cursor-zoom-in"
+                            className="featured-item shrink-0 w-75 md:w-150 h-125 rounded-none overflow-hidden relative group cursor-zoom-in"
                         >
-                            <img
+                            <Image
                                 src={prop.image}
                                 alt={prop.title}
-                                className="absolute inset-0 w-full h-full object-cover rounded-none transition-transform duration-1000 group-hover:scale-105"
+                                fill={true}
+                                className="object-cover rounded-none transition-transform duration-1000 group-hover:scale-105"
+                                sizes="(max-width: 768px) 300px, 600px"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent" />
 
                             <div className="absolute top-6 right-6">
                                 <span className="px-4 py-2 bg-white/10 backdrop-blur-md text-[#C5A059] text-sm font-bold rounded-none">
@@ -95,8 +98,7 @@ const FeaturedProperties: React.FC = () => {
                         </div>
                     ))}
 
-                    {/* Spacer at the end for scroll feel */}
-                    <div className="flex-shrink-0 w-[100px]" />
+                    <div className="shrink-0 w-25" />
                 </div>
             </div>
 

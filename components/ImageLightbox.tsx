@@ -38,7 +38,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ isOpen, src, onClose }) =
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-12 cursor-zoom-out"
+                    className="fixed inset-0 z-200 flex items-center justify-center p-4 md:p-12 cursor-zoom-out"
                     onClick={onClose}>
                     <div className="absolute inset-0 bg-[#0F172A]/90 backdrop-blur-xl" />
 
@@ -46,7 +46,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ isOpen, src, onClose }) =
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0, opacity: 0 }}
-                        className="absolute top-8 right-8 z-[210] w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                        className="absolute top-8 right-8 z-210 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                         onClick={onClose}
                     >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ isOpen, src, onClose }) =
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.8, opacity: 0, y: 20 }}
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className="relative z-[205] max-w-full max-h-full overflow-hidden shadow-2xl"
+                        className="relative z-205 max-w-full max-h-full overflow-hidden shadow-2xl"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Image
@@ -69,7 +69,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ isOpen, src, onClose }) =
                             height={600}
                             className="max-w-full max-h-[85vh] object-contain shadow-2xl border-4 border-white/5"
                         />
-                        <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent">
+                        <div className="absolute bottom-0 left-0 w-full p-6 bg-linear-to-t from-black/60 to-transparent">
                             <p className="text-white/80 text-sm font-medium tracking-wide">Bahria Elite Premium View</p>
                         </div>
                     </motion.div>

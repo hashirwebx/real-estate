@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -15,7 +15,6 @@ const ClientLoader: React.FC<Props> = ({ title = 'Real Estate' }) => {
     const lenisRef = useRef<Lenis | null>(null);
     const loaderRef = useRef<HTMLDivElement>(null);
     const counterRef = useRef<HTMLDivElement>(null);
-    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const lenis = new Lenis({
@@ -25,7 +24,7 @@ const ClientLoader: React.FC<Props> = ({ title = 'Real Estate' }) => {
             gestureOrientation: 'vertical',
             smoothWheel: true,
         });
-
+        
         lenisRef.current = lenis;
         lenis.stop();
 
@@ -39,7 +38,6 @@ const ClientLoader: React.FC<Props> = ({ title = 'Real Estate' }) => {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline({
                 onComplete: () => {
-                    setIsLoading(false);
                     lenis.start();
                     if (loaderRef.current) loaderRef.current.style.display = 'none';
                 }
@@ -108,11 +106,11 @@ const ClientLoader: React.FC<Props> = ({ title = 'Real Estate' }) => {
         };
     }, []);
 
-    // render loader markup; isLoading state is used by the animations, but returning the markup always is fine
+    // render loader markup
     return (
         <>
-            <div className="global-progress-bar fixed top-0 left-0 w-full h-1 bg-[#FBA12B] z-[100] origin-left scale-x-0" />
-            <div ref={loaderRef} className="fixed inset-0 z-[1000] pointer-events-none">
+            <div className="global-progress-bar fixed top-0 left-0 w-full h-1 bg-[#FBA12B] z-100 origin-left scale-x-0" />
+            <div ref={loaderRef} className="fixed inset-0 z-1000 pointer-events-none">
                 <div className="loader-panel-top absolute top-0 left-0 w-full h-1/2 bg-[#0F172A] z-10" />
                 <div className="loader-panel-bottom absolute bottom-0 left-0 w-full h-1/2 bg-[#0F172A] z-10" />
 
@@ -129,7 +127,7 @@ const ClientLoader: React.FC<Props> = ({ title = 'Real Estate' }) => {
                     </div>
 
                     <div className="flex flex-col items-center gap-4 w-64 md:w-80">
-                        <div className="w-full h-[2px] bg-white/10 relative overflow-hidden rounded-full">
+                        <div className="w-full h-0.5 bg-white/10 relative overflow-hidden rounded-full">
                             <div className="loader-bar-fill absolute top-0 left-0 w-0 h-full bg-[#FBA12B]" />
                         </div>
                         <div className="flex justify-between w-full px-1">

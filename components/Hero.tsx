@@ -3,6 +3,7 @@
 
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 
 const Hero: React.FC = () => {
@@ -37,15 +38,18 @@ const Hero: React.FC = () => {
     return (
         <section
             ref={containerRef}
-            className="bg-gradient-to-b from-[#83B3F5] via-lightskyblue dark:via-[#83B3F5] to-[#83B3F5] dark:to-[#83B3F5] overflow-hidden relative w-full h-screen min-h-\[800px\] flex flex-col justify-center overflow-hidden"
+            className="bg-linear-to-b from-[#83B3F5] via-lightskyblue dark:via-[#83B3F5] to-[#83B3F5] dark:to-[#83B3F5] overflow-hidden relative w-full h-screen min-h-200 flex flex-col justify-center"
         >
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src="https://homely-nextjs-tailwind.vercel.app/images/hero/heroBanner.png"
-                    alt="Futuristic Haven Architecture"
-                    className="w-full h-full object-cover"
-                />
+                <div className="relative w-full h-full">
+                    <Image
+                        src="https://homely-nextjs-tailwind.vercel.app/images/hero/heroBanner.png"
+                        alt="Futuristic Haven Architecture"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
 
                 <div className="absolute inset-0 bg-black/5" />
             </div>

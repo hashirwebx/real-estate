@@ -4,6 +4,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TESTIMONIALS } from '../constants';
+import Image from 'next/image';
 
 const Testimonials: React.FC = () => {
     const [index, setIndex] = useState(0);
@@ -48,7 +49,7 @@ const Testimonials: React.FC = () => {
                     What <span className="text-slate-400 font-light">people</span> say
                 </h2>
 
-                <div className="relative flex justify-center items-center gap-4 md:gap-8 mb-20 min-h-[500px]">
+                <div className="relative flex justify-center items-center gap-4 md:gap-8 mb-20 min-h-125">
                     <AnimatePresence mode="popLayout" initial={false}>
                         {getVisibleItems().map((item) => {
                             const isCenter = item.position === 'center';
@@ -81,7 +82,7 @@ const Testimonials: React.FC = () => {
                                         damping: 20,
                                         opacity: { duration: 0.4 }
                                     }}
-                                    className={`relative group w-full max-w-[380px] transition-all duration-700 ${item.position === 'left' ? 'hidden md:block' :
+                                    className={`relative group w-full max-w-95 transition-all duration-700 ${item.position === 'left' ? 'hidden md:block' :
                                             item.position === 'right' ? 'hidden md:block' :
                                                 ''
                                         }`}
@@ -97,7 +98,7 @@ const Testimonials: React.FC = () => {
                                         </p>
 
                                         <div
-                                            className={`absolute bottom-[-15px] left-12 w-8 h-8 rotate-45 transition-colors duration-700 ${isCenter
+                                            className={`absolute -bottom-3.75 left-12 w-8 h-8 rotate-45 transition-colors duration-700 ${isCenter
                                                     ? 'bg-[#101b35]'
                                                     : 'bg-white group-hover:bg-[#0F172A]'
                                                 }`}
@@ -105,9 +106,11 @@ const Testimonials: React.FC = () => {
                                     </div>
 
                                     <div className={`flex items-center gap-4 px-8 transition-all duration-500 ${isCenter ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0'}`}>
-                                        <img
+                                        <Image
                                             src={item.image}
                                             alt={item.name}
+                                            width={48}
+                                            height={48}
                                             className="w-12 h-12 rounded-full object-cover border-2 border-slate-100 shadow-md"
                                         />
                                         <div className="text-left">
@@ -133,6 +136,8 @@ const Testimonials: React.FC = () => {
 
                     <div className="flex items-center gap-6">
                         <button
+                            type="button"
+                            aria-label="Previous testimonial"
                             onClick={(e) => { e.stopPropagation(); prev(); }}
                             className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:border-[#FBA12B] hover:text-[#FBA12B] hover:bg-slate-50 transition-all active:scale-90"
                         >
@@ -141,6 +146,8 @@ const Testimonials: React.FC = () => {
                             </svg>
                         </button>
                         <button
+                            type="button"
+                            aria-label="Next testimonial"
                             onClick={(e) => { e.stopPropagation(); next(); }}
                             className="w-12 h-12 rounded-full bg-[#FBA12B] flex items-center justify-center text-white shadow-lg shadow-orange-500/20 hover:bg-[#e89325] hover:scale-105 transition-all active:scale-90"
                         >

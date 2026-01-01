@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
     return (
         <>
             <nav
-                className={`fixed left-1/2 w-[1350px] -translate-x-1/2 z-50 rounded-full transition-all duration-900 ease-out flex items-center justify-between px-6 md:px-10 ${isScrolled
+                className={`fixed left-1/2 w-337.5 -translate-x-1/2 z-50 rounded-full transition-all duration-900 ease-out flex items-center justify-between px-6 md:px-10 ${isScrolled
                     ? 'top-6 w-[95%] max-w-7xl py-1 bg-white/95 backdrop-blur-lg rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100'
                     : 'top-0 w-[80%] py-6 bg-transparent'
                     }`}
@@ -84,14 +84,14 @@ const Navbar: React.FC = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[100] bg-slate-950/40 backdrop-blur-sm"
+                        className="fixed inset-0 z-100 bg-slate-950/40 backdrop-blur-sm"
                     >
                         <motion.div
                             initial={{ x: '100%' }}
                             animate={{ x: 0 }}
                             exit={{ x: '100%' }}
                             transition={{ type: 'spring', damping: 30, stiffness: 200 }}
-                            className="absolute right-0 top-0 w-full sm:w-[500px] h-full bg-[#111827] text-white p-12 md:p-20 flex flex-col justify-between shadow-2xl"
+                            className="absolute right-0 top-0 w-full sm:w-125 h-full bg-[#111827] text-white p-12 md:p-20 flex flex-col justify-between shadow-2xl"
                         >
                             <div className="flex justify-start">
                                 <button

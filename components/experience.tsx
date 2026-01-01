@@ -92,12 +92,12 @@ const Experience: React.FC = () => {
             <div className="max-w-7xl mx-auto px-6">
                 <div ref={titleRef} className="exp-header mb-24 max-w-3xl">
                     <div className="flex items-center gap-4 mb-6">
-                        <div className="exp-line w-20 h-[2px] bg-[#FBA12B]" />
+                        <div className="exp-line w-20 h-0.5 bg-[#FBA12B]" />
                         <span className="text-[#FBA12B] font-bold text-xs uppercase tracking-widest">A Decade of Trust</span>
                     </div>
                     <h2 className="text-5xl md:text-7xl font-black text-slate-950 mb-8 leading-[0.95] tracking-tighter">
                         Our Legacy in <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-slate-400">Bahria Town</span>
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-900 via-slate-700 to-slate-400">Bahria Town</span>
                     </h2>
                     <p className="text-lg text-slate-500 max-w-xl leading-relaxed">
                         We Are Pakistan’s Leading Experts in Real Estate Sales and Investment
@@ -115,7 +115,7 @@ const Experience: React.FC = () => {
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#FBA12B]/10 blur-[100px]" />
                     <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="max-w-2xl">
-                            <h3 className="text-3xl font-bold text-white mb-4 italic">"Expertise that turns your property dreams into high-value reality."</h3>
+                            <h3 className="text-3xl font-bold text-white mb-4 italic">Expertise that turns your property dreams into high-value reality.</h3>
                             <p className="text-white/40 font-medium tracking-widest uppercase text-sm">— Bahria Elite Leadership</p>
                         </div>
                         <motion.button
