@@ -15,7 +15,6 @@ const PropertyTypes: React.FC = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // 1. Entrance Animation for Content (Text, Button, Icon)
             const contentElements = contentRef.current?.children;
             if (contentElements) {
                 gsap.from(contentElements, {
@@ -31,7 +30,6 @@ const PropertyTypes: React.FC = () => {
                 });
             }
 
-            // 2. Bento Grid Items Reveal
             gsap.from('.grid-item-reveal', {
                 scrollTrigger: {
                     trigger: containerRef.current,
@@ -44,13 +42,11 @@ const PropertyTypes: React.FC = () => {
                 duration: 1.6,
                 ease: 'expo.out',
             });
-
-            // 3. Internal Parallax for Images
             imagesRef.current.forEach((el) => {
                 if (el) {
                     const img = el.querySelector('img');
                     gsap.to(img, {
-                        y: -40, // Subtle movement
+                        y: -40, 
                         ease: 'none',
                         scrollTrigger: {
                             trigger: el,
@@ -62,7 +58,6 @@ const PropertyTypes: React.FC = () => {
                 }
             });
 
-            // 4. Background Decorative Lines "Growth" Animation
             gsap.set('.bg-line-path', { strokeDasharray: 1000, strokeDashoffset: 1000 });
             gsap.to('.bg-line-path', {
                 strokeDashoffset: 0,
@@ -126,8 +121,6 @@ const PropertyTypes: React.FC = () => {
                             </button>
                         </div>
                     </div>
-
-                    {/* GRID ITEM 1: Top Right (Luxury Villas) */}
                     <div
                         ref={(el) => { imagesRef.current[0] = el; }}
                         className="grid-item-reveal md:col-span-7 h-[450px] overflow-hidden shadow-2xl relative group cursor-pointer"
@@ -144,7 +137,6 @@ const PropertyTypes: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* GRID ITEM 2: Bottom Left (Large Landscape) */}
                     <div
                         ref={(el) => { imagesRef.current[1] = el; }}
                         className="grid-item-reveal md:col-span-6 h-[400px] overflow-hidden shadow-2xl relative group cursor-pointer"
@@ -161,7 +153,8 @@ const PropertyTypes: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* GRID ITEM 3: Bottom Middle (Tall Portrait) */}
+
+
                     <div
                         ref={(el) => { imagesRef.current[2] = el; }}
                         className="grid-item-reveal md:col-span-3 h-[400px] overflow-hidden shadow-2xl relative group cursor-pointer"
@@ -178,7 +171,8 @@ const PropertyTypes: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* GRID ITEM 4: Bottom Right (Portrait/Square) */}
+
+
                     <div
                         ref={(el) => { imagesRef.current[3] = el; }}
                         className="grid-item-reveal md:col-span-3 h-[400px] overflow-hidden shadow-2xl relative group cursor-pointer"

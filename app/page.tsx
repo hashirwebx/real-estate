@@ -10,7 +10,6 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
-// Dynamically load the client-only loader/animation component (will only run in the browser)
 const ClientLoader = dynamic(() => import('../components/ClientLoader'));
 
 const Page: React.FC = () => {
@@ -19,7 +18,6 @@ const Page: React.FC = () => {
   return (
     <div className="relative w-full overflow-hidden">
       <Navbar />
-      {/* client-only loader / animation logic */}
       <ClientLoader title={title} />
 
       <div className="min-h-screen bg-white">

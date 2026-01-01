@@ -17,7 +17,6 @@ const Testimonials: React.FC = () => {
         setIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
     }, []);
 
-    // Auto-slide effect
     useEffect(() => {
         if (isPaused) return;
 
@@ -28,7 +27,6 @@ const Testimonials: React.FC = () => {
         return () => clearInterval(timer);
     }, [next, isPaused]);
 
-    // Get three testimonials to show: prev, current, next
     const getVisibleItems = () => {
         const prevIdx = (index - 1 + TESTIMONIALS.length) % TESTIMONIALS.length;
         const nextIdx = (index + 1) % TESTIMONIALS.length;
@@ -50,7 +48,6 @@ const Testimonials: React.FC = () => {
                     What <span className="text-slate-400 font-light">people</span> say
                 </h2>
 
-                {/* Testimonials Container */}
                 <div className="relative flex justify-center items-center gap-4 md:gap-8 mb-20 min-h-[500px]">
                     <AnimatePresence mode="popLayout" initial={false}>
                         {getVisibleItems().map((item) => {
@@ -89,7 +86,6 @@ const Testimonials: React.FC = () => {
                                                 ''
                                         }`}
                                 >
-                                    {/* Speech Bubble Card */}
                                     <div
                                         className={`relative p-8 md:p-10 rounded-[40px] shadow-xl transition-all duration-700 mb-12 ${isCenter
                                                 ? 'bg-[#101b35] text-white shadow-navy-900/20'
@@ -100,7 +96,6 @@ const Testimonials: React.FC = () => {
                                             {item.content}
                                         </p>
 
-                                        {/* Speech Bubble Tail */}
                                         <div
                                             className={`absolute bottom-[-15px] left-12 w-8 h-8 rotate-45 transition-colors duration-700 ${isCenter
                                                     ? 'bg-[#101b35]'
@@ -109,7 +104,6 @@ const Testimonials: React.FC = () => {
                                         />
                                     </div>
 
-                                    {/* Profile Info */}
                                     <div className={`flex items-center gap-4 px-8 transition-all duration-500 ${isCenter ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0'}`}>
                                         <img
                                             src={item.image}
@@ -127,9 +121,7 @@ const Testimonials: React.FC = () => {
                     </AnimatePresence>
                 </div>
 
-                {/* Navigation Section */}
                 <div className="flex flex-col items-center gap-8">
-                    {/* Decorative Progress Arc */}
                     <div className="relative w-48 h-1 flex items-center justify-center bg-slate-100 rounded-full overflow-hidden">
                         <motion.div
                             className="absolute left-0 h-full bg-[#FBA12B]"

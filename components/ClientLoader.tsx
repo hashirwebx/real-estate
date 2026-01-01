@@ -111,7 +111,7 @@ const ClientLoader: React.FC<Props> = ({ title = 'Real Estate' }) => {
     // render loader markup; isLoading state is used by the animations, but returning the markup always is fine
     return (
         <>
-            <div className="global-progress-bar fixed top-0 left-0 w-full h-[4px] bg-[#FBA12B] z-[100] origin-left scale-x-0" />
+            <div className="global-progress-bar fixed top-0 left-0 w-full h-1 bg-[#FBA12B] z-[100] origin-left scale-x-0" />
             <div ref={loaderRef} className="fixed inset-0 z-[1000] pointer-events-none">
                 <div className="loader-panel-top absolute top-0 left-0 w-full h-1/2 bg-[#0F172A] z-10" />
                 <div className="loader-panel-bottom absolute bottom-0 left-0 w-full h-1/2 bg-[#0F172A] z-10" />
