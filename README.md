@@ -28,7 +28,7 @@ A modern **single-page real estate demo website** built with **Next.js**, **Type
 ##  Getting Started
 
 ```bash
-git clone https://github.com/your-username/real-estate-single-demo.git
-cd real-estate-single-demo
+git clone https://github.com/hashirwebx/real-estate.git
+cd real-estate
 npm install
 npm run dev
