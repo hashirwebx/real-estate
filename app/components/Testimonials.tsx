@@ -47,6 +47,7 @@ const Testimonials: React.FC = () => {
             <div className="max-w-7xl mx-auto px-6 text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-20 tracking-tight">
                     What <span className="text-slate-400 font-light">people</span> say
+                    <p className='text-2xl mx-auto pt-10 text-center'>"Client Testimonials"</p>
                 </h2>
 
                 <div className="relative flex justify-center items-center gap-4 md:gap-8 mb-20 min-h-125">

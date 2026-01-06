@@ -93,15 +93,19 @@ const Experience: React.FC = () => {
                 <div ref={titleRef} className="exp-header mb-24 max-w-3xl">
                     <div className="flex items-center gap-4 mb-6">
                         <div className="exp-line w-20 h-0.5 bg-[#FBA12B]" />
-                        <span className="text-[#FBA12B] font-bold text-xs uppercase tracking-widest">A Decade of Trust</span>
+                        <span className="text-[#FBA12B] font-bold text-xs uppercase tracking-widest">Our Legacy in Bahria Phase 7, Islamabad</span>
                     </div>
                     <h2 className="text-5xl md:text-7xl font-black text-slate-950 mb-8 leading-[0.95] tracking-tighter">
                         Our Legacy in <br />
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-900 via-slate-700 to-slate-400">Bahria Town</span>
                     </h2>
                     <p className="text-lg text-slate-500 max-w-xl leading-relaxed">
-                        We Are Pakistan’s Leading Experts in Real Estate Sales and Investment
-                        With 18 years of proven experience, Top10 Marketing specializes in property sales, real estate investments, and project marketing. Our team is dedicated to delivering transparent, reliable, and profitable real estate solutions for both investors and homeowners.
+                        We are a dedicated real estate team specializing exclusively in Bahria Phase 7, Islamabad. With over 15 years of hands-on market experience, we have successfully guided families, investors, and businesses through secure property transactions in one of Bahria Town’s most developed phases.
+
+                        Our focus has always been simple:
+                        honest advice, verified properties, and long-term value.
+
+                        From residential houses to commercial investments, we help clients make informed decisions backed by real market knowledge, not speculation.
                     </p>
                 </div>
 
@@ -115,8 +119,12 @@ const Experience: React.FC = () => {
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#FBA12B]/10 blur-[100px]" />
                     <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="max-w-2xl">
-                            <h3 className="text-3xl font-bold text-white mb-4 italic">Expertise that turns your property dreams into high-value reality.</h3>
-                            <p className="text-white/40 font-medium tracking-widest uppercase text-sm">— Bahria Elite Leadership</p>
+                            <h3 className="text-3xl font-bold text-white mb-4 italic">Expertise That Turns Property Goals Into Long-Term Value.</h3>
+                            <p className="text-white/40 font-medium tracking-widest uppercase text-sm">— Our leadership team brings years of on-ground experience in Bahria Town Islamabad, ensuring every client receives realistic guidance, transparent pricing, and complete transaction support.
+                                <br />
+                                “Our reputation is built on trust, not volume. Every deal reflects our commitment to transparency and professionalism.”
+                                <br />
+                                Bahria Phase 7 Real Estate Leadership</p>
                         </div>
                         <motion.button
                             whileHover={{ scale: 1.05 }}

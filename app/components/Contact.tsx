@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
     const contactInfo = [
         {
             label: "Visit Us:",
-            value: "Office No 7, First Floor, Bahria Town, Phase 7, Islamabad",
+            value: "Bahria Town, Phase 7, Islamabad",
             icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
         },
         {
             label: "Mail Us:",
-            value: "info@bahriaElite.com",
+            value: "info@yourrealestatebusiness.com",
             icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
         },
         {
             label: "Phone:",
-            value: "0334 000000",
+            value: "+92 XXX XXX XXXX",
             icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -87,11 +87,15 @@ const Contact: React.FC = () => {
                         <span className="contact-reveal text-[10px] font-black uppercase tracking-[0.2em] text-slate-800 mb-4 block">
                             CONTACT US
                         </span>
-                        <h2 className="contact-reveal text-4xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tight">
+                        <h2 className="contact-reveal text-3xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tight">
                             Get In Touch
+                            <br />
+                            <span className='contact-reveal text-2xl'>With Our Property Experts</span>
                         </h2>
                         <p className="contact-reveal text-slate-500 text-sm leading-relaxed mb-12 max-w-lg">
-                            Looking for information about a housing society or need help choosing the right property? Were here to assist you with expert guidance, project details, booking, and investment plans.
+                            Looking for verified information about Bahria Phase 7 Islamabad or need professional help in selecting the right property? Our experienced team is here to assist you with buying, selling, booking, and investment planning — with complete transparency and market insight.
+                            <br />
+                            Whether you are a first-time buyer or a seasoned investor, we provide clear guidance tailored to your goals.
                         </p>
 
                         <div className="space-y-10">
@@ -124,28 +128,28 @@ const Contact: React.FC = () => {
                                         <input
                                             type="text"
                                             placeholder="Name"
-                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black"
+                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 text-slate-900 transition-colors placeholder:text-gray-500"
                                         />
                                     </div>
                                     <div className="relative">
                                         <input
                                             type="email"
                                             placeholder="E-Mail"
-                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black"
+                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 text-slate-900 transition-colors placeholder:text-gray-500"
                                         />
                                     </div>
                                     <div className="relative">
                                         <input
                                             type="tel"
                                             placeholder="Phone Number"
-                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black"
+                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 text-slate-900  transition-colors placeholder:text-gray-500"
                                         />
                                     </div>
                                     <div className="relative">
                                         <input
                                             type="text"
                                             placeholder="Your Website"
-                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black"
+                                            className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 text-slate-900  transition-colors placeholder:text-gray-500"
                                         />
                                     </div>
                                 </div>
@@ -154,20 +158,16 @@ const Contact: React.FC = () => {
                                     <textarea
                                         rows={4}
                                         placeholder="Your Message Here"
-                                        className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-black resize-none"
+                                        className="w-full bg-transparent border-b border-slate-200 py-2 text-sm focus:outline-none focus:border-slate-900 text-slate-900 transition-colors placeholder:text-gray-500 resize-none"
                                     />
-                                    <div className="absolute bottom-4 right-0 text-slate-400">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                        </svg>
-                                    </div>
+                                    
                                 </div>
 
                                 <div className="pt-4">
-                                    <button type="submit" className="group relative px-10 py-4 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
-                                <span className="relative z-10">Submit Now</span>
-                                <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                            </button>
+                                    <button type="submit" className="group relative px-8 py-3 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                                        <span className="relative z-10">Submit Now</span>
+                                        <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -181,7 +181,8 @@ const Contact: React.FC = () => {
                         <div className="bg-white p-6 shadow-xl border border-slate-100 max-w-70">
                             <h4 className="font-bold text-sm text-slate-900 mb-1">Top 10 Group of Companies</h4>
                             <p className="text-[11px] text-slate-500 leading-relaxed mb-4">
-                                Office No 7, First Floor, Bahria Town, Phase 7, Islamabad
+                                Office Address:
+                                Bahria Town, Phase 7, Islamabad
                             </p>
                             <div className="flex items-center gap-1 mb-2">
                                 <span className="text-[11px] font-bold text-slate-900">5.0</span>

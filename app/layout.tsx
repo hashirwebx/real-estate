@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Real Estate Company",
-  description: "created by Real Estate Company",
+  title: "Bahria Elite | Trusted Real Estate Consultants in Bahria Phase 7 Islamabad",
+  description: "Bahria Elite is a professional real estate company in Bahria Phase 7 Islamabad, specializing in verified property sales, investment advisory, and commercial real estate trading with transparent and reliable services.",
 };
 
 export default function RootLayout({

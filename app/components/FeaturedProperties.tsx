@@ -39,7 +39,7 @@ const FeaturedProperties: React.FC = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured <br />Properties</h2>
                 <div className="flex items-center gap-4 text-[#C5A059]">
                     <div className="w-12 h-0.5 bg-[#C5A059]" />
-                    <span className="text-sm font-bold uppercase tracking-widest">Selected for Excellence</span>
+                    <span className="text-sm font-bold uppercase tracking-widest">Handpicked Premium Listings in Bahria Phase 7</span>
                 </div>
             </div>
 

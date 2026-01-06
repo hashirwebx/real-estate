@@ -1,8 +1,13 @@
 
 "use client";
 
-
-
+declare global {
+    interface Window {
+        lenis?: {
+            scrollTo: (target: number | Element, options?: { offset?: number; duration?: number; easing?: (t: number) => number }) => void;
+        };
+    }
+}
 
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -13,6 +18,38 @@ const PropertyTypes: React.FC = () => {
     const containerRef = useRef<HTMLElement>(null);
     const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
     const contentRef = useRef<HTMLDivElement>(null);
+
+    const handleNavClick = (e: React.MouseEvent<HTMLElement>, targetId: string): void => {
+        e.preventDefault();
+
+        // Use the global Lenis instance for high-quality smooth scroll
+        if (window.lenis) {
+            if (targetId === 'top') {
+                window.lenis.scrollTo(0, {
+                    duration: 1.5,
+                    easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                });
+            } else {
+                const element = document.getElementById(targetId);
+                if (element) {
+                    window.lenis.scrollTo(element, {
+                        offset: -80,
+                        duration: 1.5,
+                        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                    });
+                }
+            }
+        } else {
+            // Fallback to native smooth scroll
+            const element = document.getElementById(targetId);
+            if (element) {
+                window.scrollTo({
+                    top: targetId === 'top' ? 0 : element.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -47,7 +84,7 @@ const PropertyTypes: React.FC = () => {
                 if (el) {
                     const img = el.querySelector('img');
                     gsap.to(img, {
-                        y: -40, 
+                        y: -40,
                         ease: 'none',
                         scrollTrigger: {
                             trigger: el,
@@ -77,7 +114,7 @@ const PropertyTypes: React.FC = () => {
     }, []);
 
 
-    
+
 
     return (
         <section id="services" className="py-32 bg-white relative overflow-hidden" ref={containerRef}>
@@ -106,17 +143,19 @@ const PropertyTypes: React.FC = () => {
                             <span className="text-[#FBA12B] font-black text-xs uppercase tracking-[0.2em]">Categories</span>
                         </div>
 
-                        <h2 className="text-5xl md:text-6xl font-black text-slate-900 leading-[1.05] tracking-tighter mb-8">
-                            Explore best properties <br />
-                            <span className="text-slate-400">with expert services.</span>
+                        <h2 className="text-5xl md:text-5xl font-black text-slate-900 leading-[1.05] tracking-tighter mb-8">
+                            Explore the Best Properties <br />
+                            <span className="text-slate-400"> with Expert Services</span>
                         </h2>
 
                         <p className="text-slate-500 text-lg mb-10 leading-relaxed font-medium">
-                            Discover a diverse range of premium properties, from luxurious apartments to spacious villas, tailored to your needs.
+                            Bahria Phase 7 Islamabad offers a wide range of residential plots, houses, and commercial properties tailored for families, investors, and business owners. Our expert real estate consultants help you find the right property based on your needs, budget, and future goals.
+
+                            From modern villas to smart commercial spaces, every property in Bahria Phase 7 is developed with high construction standards, wide roads, green belts, and world‑class infrastructure.
                         </p>
 
                         <div>
-                            <button className="group relative px-10 py-4 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
+                            <button onClick={(e) => handleNavClick(e, 'proporties')} className="group relative px-10 py-4 bg-[#FBA12B] text-white font-bold rounded-full overflow-hidden transition-all active:scale-95 shadow-xl shadow-[#00D1A0]/10">
                                 <span className="relative z-10">View properties</span>
                                 <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                             </button>
@@ -130,7 +169,7 @@ const PropertyTypes: React.FC = () => {
                             src={PROPERTY_TYPES[0].image}
                             alt={PROPERTY_TYPES[0].title}
                             fill
-                            style={{objectFit: 'cover'}}
+                            style={{ objectFit: 'cover' }}
                             className="scale-110 transition-transform duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
@@ -148,7 +187,7 @@ const PropertyTypes: React.FC = () => {
                             src={PROPERTY_TYPES[3].image}
                             alt={PROPERTY_TYPES[3].title}
                             fill
-                            style={{objectFit: 'cover'}}
+                            style={{ objectFit: 'cover' }}
                             className="scale-110 transition-transform duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
@@ -168,7 +207,7 @@ const PropertyTypes: React.FC = () => {
                             src={PROPERTY_TYPES[1].image}
                             alt={PROPERTY_TYPES[1].title}
                             fill
-                            style={{objectFit: 'cover'}}
+                            style={{ objectFit: 'cover' }}
                             className="scale-110 transition-transform duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
@@ -188,7 +227,7 @@ const PropertyTypes: React.FC = () => {
                             src={PROPERTY_TYPES[2].image}
                             alt={PROPERTY_TYPES[2].title}
                             fill
-                            style={{objectFit: 'cover'}}
+                            style={{ objectFit: 'cover' }}
                             className="scale-110 transition-transform duration-1000 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-500" />
